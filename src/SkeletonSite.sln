@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkeletonSite.Mvc", "SkeletonSite.Mvc\SkeletonSite.Mvc.csproj", "{5B706371-952F-4BAA-9AE8-C30970E8BF43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkeletonSite.Mvc.Controllers", "SkeletonSite.Mvc.Controllers\SkeletonSite.Mvc.Controllers.csproj", "{020640D2-F297-47CE-B271-3DC4623DDDF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkeletonSite.Kernel", "SkeletonSite.Kernel\SkeletonSite.Kernel.csproj", "{ED4B70FC-83A3-4BCC-A2AC-323A3A38E4B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F76D26A0-6D23-49D6-A5C3-9624D4FAA6CC}"
+	ProjectSection(SolutionItems) = preProject
+		Configuration.xml = Configuration.xml
+		Services.xml = Services.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkeletonSite.Mvc.Logic", "SkeletonSite.Mvc.Logic\SkeletonSite.Mvc.Logic.csproj", "{76238604-231A-45C1-9E3D-C26C6BA3AFC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkeletonSite.Mvc.Models", "SkeletonSite.Mvc.Models\SkeletonSite.Mvc.Models.csproj", "{6F77DD95-6417-479F-9F8B-5655F2C3BED7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B706371-952F-4BAA-9AE8-C30970E8BF43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B706371-952F-4BAA-9AE8-C30970E8BF43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B706371-952F-4BAA-9AE8-C30970E8BF43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B706371-952F-4BAA-9AE8-C30970E8BF43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{020640D2-F297-47CE-B271-3DC4623DDDF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{020640D2-F297-47CE-B271-3DC4623DDDF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{020640D2-F297-47CE-B271-3DC4623DDDF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{020640D2-F297-47CE-B271-3DC4623DDDF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED4B70FC-83A3-4BCC-A2AC-323A3A38E4B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED4B70FC-83A3-4BCC-A2AC-323A3A38E4B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED4B70FC-83A3-4BCC-A2AC-323A3A38E4B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED4B70FC-83A3-4BCC-A2AC-323A3A38E4B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76238604-231A-45C1-9E3D-C26C6BA3AFC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76238604-231A-45C1-9E3D-C26C6BA3AFC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76238604-231A-45C1-9E3D-C26C6BA3AFC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76238604-231A-45C1-9E3D-C26C6BA3AFC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F77DD95-6417-479F-9F8B-5655F2C3BED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F77DD95-6417-479F-9F8B-5655F2C3BED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F77DD95-6417-479F-9F8B-5655F2C3BED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F77DD95-6417-479F-9F8B-5655F2C3BED7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

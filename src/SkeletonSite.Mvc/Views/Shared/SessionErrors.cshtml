@@ -1,0 +1,30 @@
+﻿@model List<Exception>
+
+@if (Model.Count > 0)
+{
+    <ul id="sessionErrors" class="systemNotifications boxshadow borderradius">
+        <li class="header">@Translate("Errors")</li>
+        @foreach (var item in Model)
+        {
+            <li>
+                @item.Message
+                @if (item.InnerException != null)
+                {
+                    string innerMessage = String.Format("({0})", item.InnerException.Message);
+                    @innerMessage;
+                }
+            
+                @if ((item.StackTrace != null || (item.InnerException != null && item.InnerException.StackTrace != null))
+                    && Configuration.System.DebugMode)
+                {
+                    string strackTrace = (item.StackTrace != null) ? item.StackTrace : item.InnerException.StackTrace;
+                    <a href="#" class="stacktrace">[show stacktrace]</a>
+                    <pre class="stacktrace">@Html.Raw(strackTrace)</pre>
+                }
+            </li>
+        }
+    </ul>
+    
+    @* Clear errors so they won't be displayed for the next request *@
+    SessionManager.SessionErrors.Clear();
+}

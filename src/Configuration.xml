@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Note that there may also be some configuration required in web.config
+-->
+<Configurations>
+
+    <Configuration solution="SkeletonSite">
+
+        <Database>
+            <ConnectionString>Data Source=LOCALHOST\SQLEXPRESS; Initial Catalog=SkeletonSite; User Id=SkeletonSite; Password=SkeletonSite; MultipleActiveResultSets=true</ConnectionString>
+            <ConnectionDriverClass>NHibernate.Driver.SqlClientDriver</ConnectionDriverClass>
+            <Dialect>NHibernate.Dialect.MsSql2008Dialect</Dialect>
+            <ConnectionProvider>NHibernate.Connection.DriverConnectionProvider</ConnectionProvider>
+            <FactoryClass>NHibernate.ByteCode.Castle.ProxyFactoryFactory, NHibernate.ByteCode.Castle</FactoryClass>
+            <!-- Sql logging, turn off on production server -->
+            <ShowSql>false</ShowSql>
+            <FormatSql>false</FormatSql>
+            <!-- Allows the kernel to update the database schema according to the object model.
+                 This setting is an extra safety precaution that overrides the updateDatabase parameter of the GenerateSchema() utility method
+            -->
+            <AllowSchemaUpdate>true</AllowSchemaUpdate>
+        </Database>
+
+        <System>
+            <Domain>localhost</Domain>
+            <AuthenticationExpiration>60</AuthenticationExpiration>
+            <TempFolder>d:\Projects\SkeletonSite_1.0.0\tmp\</TempFolder>
+
+            <!-- ReadOnlyMode disables all activity involves writing to the database -->
+            <ReadOnlyMode>false</ReadOnlyMode>
+
+            <!-- Enables debugging options (such as stracktrace with error messages) -->
+            <DebugMode>true</DebugMode>
+
+            <!-- DefaultLanguage setting must match value from SkeletonSite.Kernel.Enumerations.Languages enumator (case sensitive!) -->
+            <DefaultLanguage>Dutch</DefaultLanguage>
+        </System>
+
+        <Logging>
+            <!-- Set <enabled> to false to disable logging completely
+                 
+                 Loggers can be toggled independently by setting their logging level.
+                 There are four levels of logging: Debug (3), Info (2), Error (1), None (0)
+                 Underlying levels are automaticly enabled (with the exception of None).
+                 So when logging level is set to Debug, Info and Error are also enabled.
+                 
+                 Level CASE SENSITIVE and must match a value from SkeletonSite.Kernel.Logging.LogLevels enumator!!
+            -->
+            <Enabled>true</Enabled>
+            <Loggers>
+                <Logger>
+                    <LoggerType>SkeletonSite.Kernel.Logging.ConsoleLogger</LoggerType>
+                    <Level>Debug</Level>
+                    <LogFormat>[{date} {time}]: {message}</LogFormat>
+                    <CustomSettings />
+                </Logger>
+                <Logger>
+                    <LoggerType>SkeletonSite.Kernel.Logging.WebLogger</LoggerType>
+                    <Level>Debug</Level>
+                    <LogFormat>[{date} {time}]: {message}</LogFormat>
+                    <CustomSettings />
+                </Logger>
+                <Logger>
+                    <LoggerType>SkeletonSite.Kernel.Logging.FileLogger</LoggerType>
+                    <Level>None</Level>
+                    <LogFormat>[{date} {time}]: {message}</LogFormat>
+                    <CustomSettings>
+                        <LogFilePath>d:\Projects\SkeletonSite\tmp\log.txt</LogFilePath>
+                    </CustomSettings>
+                </Logger>
+            </Loggers>
+        </Logging>
+
+    </Configuration>
+
+</Configurations>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="24d8b807-e750-4f1b-8cfc-0762e7b8994e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://dummydomain.local/ExampleService.asmx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ExampleService.wsdl.wsdl" MetadataType="Wsdl" ID="436c9ed5-b76f-4646-bb70-4e8e40813a88" SourceId="1" SourceUrl="http://dummydomain.local/ExampleService.asmx?wsdl" />
+    <MetadataFile FileName="CNGCalculatorService.disco" MetadataType="Disco" ID="03d75cd6-bd3a-4f6a-a651-7c71c26eb173" SourceId="1" SourceUrl="http://dummydomain.local/ExampleService.asmx?disco" />
+  </Metadata>
+  <Extensions>
+  </Extensions>
+</ReferenceGroup>

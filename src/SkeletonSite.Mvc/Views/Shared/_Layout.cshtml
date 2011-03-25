@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    
+    <link href="@Url.Content("~/include/css/reset.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/include/css/main.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/include/css/shared.css")" rel="stylesheet" type="text/css" />
+    <!--[if IE]><link href="@Url.Content("~/include/css/ie_hacks.css")" rel="stylesheet" type="text/css" /><![endif]-->
+    @RenderSection("Stylesheets", false)
+
+    <script src="@Url.Content("~/include/scripts/html5.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/include/scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/include/scripts/jquery.cookie.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/include/scripts/common.js")" type="text/javascript"></script>
+    
+    @RenderSection("Scripts", false)
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <header id="siteheader">
+            <a href="/" class="home"><img src="/include/images/logo.png" alt="Skeleton Site" class="logo" /></a>
+            <nav id="language">
+                <span>@Dictionary.Translate("Verander taal:")</span>
+                <ul>
+                    <li class="first"><a href="#" class="Dutch @(SessionManager.ActiveLanguage == Languages.Dutch ? "active" : "")">NL</a></li>
+                    <li><a href="#" class="English @(SessionManager.ActiveLanguage == Languages.English ? "active" : "")">EN</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section id="notifications">
+            @Html.Partial("SessionErrors", SessionManager.SessionErrors)
+            @Html.Partial("SessionNotifications", SessionManager.SessionNotifications)
+        </section>
+        
+        <div id="body">
+            @RenderBody()
+        </div>
+
+        <footer>
+            @if (Configuration.System.DebugMode)
+            {
+                <a href="#" class="toggleNotifications">[hide notifications]</a>
+            }
+        </footer>
+
+    </div>
+
+</body>
+</html>

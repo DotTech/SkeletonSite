@@ -1,0 +1,42 @@
+﻿@model LoginModel
+@{
+    SetTitle("Login page");
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Stylesheets
+{
+    <link href="@Url.Content("~/include/css/forms.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/include/css/login.css")" rel="stylesheet" type="text/css" />
+}
+
+@section Scripts
+{
+    <script src="@Url.Content("~/include/scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/include/scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+}
+
+<div id="loginPage">
+
+    <header>
+        <h1>@Translate("CNG Client System")</h1>
+    </header>
+
+    @{ Html.EnableClientValidation(true); }
+    @using (Html.BeginForm("Login", "Home", FormMethod.Post, new { @class = "boxshadow borderradius" }))
+    {
+        <fieldset>
+            <legend class="gradientorange">@Translate("Login form")</legend>
+            <div class="field">
+                @Html.TextBoxFor(x => x.Username, new { placeholder = Translate("Field username"), @class = "text", tabindex = 1 })
+                @Html.ValidationMessageFor(x => x.Username)
+            </div>
+            <div class="field">
+                @Html.PasswordFor(x => x.Password, new { placeholder = Translate("Field password"), @class = "text", tabindex = 2 })
+                @Html.ValidationMessageFor(x => x.Password)
+            </div>
+            <input type="submit" class="button gradientgreen borderradius" value="@Translate("Submit button")" />
+        </fieldset>
+    }
+
+</div>

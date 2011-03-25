@@ -1,0 +1,245 @@
+/*
+* Master style sheet that is included for every page.
+* Definitions are mostly placed in the same order as they appear in HTML.
+*
+* Frequently used color codes:
+* Green:    #bdcc00
+* Orange:   #ffa201
+* Blue:     #0087c8
+*/
+
+
+/* Default styles for elements */
+body {
+    font-family: "Trebuchet MS", Verdana, Arial, Sans-serif;
+    font-size: 12px;
+    color: #222222;
+}
+
+a {
+    color: #0087c8;
+    text-decoration: underline;
+}
+
+
+/* Classes that are not tied to specific elements and may be applied whenever needed (such as shadows) */
+.boxshadow {
+	-moz-box-shadow: 2px 2px 4px #666;
+	-webkit-box-shadow: 2px 2px 4px #666;
+	box-shadow: 2px 2px 4px #666;
+}
+
+.borderradius {
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px 6px 6px 6px;
+}
+
+.gradientorange {
+	background: #f8b83a;
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.27, rgb(238,126,0)), color-stop(0.64, rgb(248,184,58)));
+	background-image: -moz-linear-gradient(center bottom, rgb(238,126,0) 27%, rgb(248,184,58) 64%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8b83a', endColorstr='#ee7e00');
+}
+
+.gradientgreen {
+	background: #eef3af;
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.27, rgb(189,204,0)), color-stop(0.64, rgb(238,243,175)));
+	background-image: -moz-linear-gradient(center bottom, rgb(189,204,0) 27%, rgb(238,243,175) 64%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bdcc00', endColorstr='#eef3af');
+}
+
+
+/* Site header */
+header#siteheader {
+    float: left;
+    width: 980px;
+    padding-bottom: 10px;
+    margin: 15px 0 15px 0;
+    border-bottom: 2px solid #bdcc00;
+}
+
+    header#siteheader a.home {
+        float: left;
+    }
+
+
+/* Language switcher */
+nav#language {   
+    float: right;
+}
+
+    nav#language span {
+        float: left;
+        clear: both;
+        margin-bottom: 4px;
+        width: 82px;
+        text-align: center;
+    }
+
+    nav#language ul {
+        float: left;
+        clear: both;
+    }
+
+    nav#language li {
+        float: left;
+        margin-left: 10px;
+    }
+    
+    nav#language li.first {
+        margin-left: 0;
+    }
+    
+        nav#language li a {
+            float: left;
+            text-indent: -9999px;
+            width: 32px;
+            height: 21px;
+            border: 2px solid #ffffff;
+        }
+    
+        nav#language li a:focus {
+            outline: none;
+        }
+    
+        nav#language li a.active {
+            border: 2px solid #bdcc00;
+        }
+    
+        /* Language classes; These class names must match the enumeration values from SkeletonSite.Kernel.Enumerations.Languages
+           When a new language is added to the enumeration, simply add the corresponding class here and add a new link to the language navigation 
+           Note that these class names are case sensitive! */
+        nav#language li a.Dutch {  
+            background: url(../images/flag_nl.png) no-repeat;
+        }
+        
+        nav#language li a.English {  
+            background: url(../images/flag_uk.png) no-repeat;
+        }
+
+
+/* Notifications and errors */
+section#notifications {
+    float: left;
+}
+
+ul.systemNotifications {
+    float: left;
+    width: 960px;
+    list-style: none;
+	padding: 10px 10px 4px 10px;
+	margin-bottom: 15px;
+}
+
+    ul.systemNotifications li {
+        margin: 0 0 5px 0;
+        line-height: 12px;
+    }
+
+    ul.systemNotifications li.header {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+#sessionNotifications {
+    border: 2px solid #008000;
+    background-color: #eef3af;
+}
+
+    #sessionNotifications li.header {
+        color: #618306;
+    }
+
+#sessionErrors {
+    border: 2px solid #8a0808;
+    background-color: #f8e0e0;
+}
+
+    #sessionErrors li.header {
+        color: #8a0808;
+    }
+    
+    #sessionErrors a {
+        color: #000000;
+    }
+
+    #sessionErrors pre {
+        display: none;
+        width: 960px;
+        white-space: normal;
+        padding: 10px;
+    }
+    
+
+/* Site wrapper and body */
+#wrapper {
+    width: 980px;
+    margin: 0 auto 0 auto;
+}
+
+div#body {
+    float: left;
+    width: 980px;
+}
+
+
+/* Site footer */
+footer {
+    float: left;
+    width: 980px;
+    padding-top: 10px;
+    margin: 20px 0 15px 0;
+    border-top: 2px solid #bdcc00;
+}
+
+
+
+
+
+
+
+/* 
+* Styles for developer-only sections and debug functions of the application 
+*/
+
+a.toggleNotifications {
+    float: left;
+}
+
+/* SkeletonSite.Kernel: Formatting for configuration report */
+.ccsConfigurationReport {
+    float: left;
+    margin-top: 15px;
+}
+
+    .ccsConfigurationReport table {
+        border: 1px solid #000000;
+        background-color: #d7d7d7;
+        margin-bottom: 20px;
+    }
+    
+    .ccsConfigurationReport table th {
+        text-align: left;
+        padding: 3px 10px 3px 3px;
+        font-size: 14px;
+    }
+    
+    .ccsConfigurationReport table td {
+        vertical-align: top;
+        background-color: #eeeeee;
+        padding: 3px 10px 3px 3px;
+    }
+    
+    .ccsConfigurationReport table td.name {
+        font-weight: bold;
+    }
+    
+    .ccsConfigurationReport table tr:nth-child(2n+1) td {
+        background-color: #eeeeee;
+    }
+    
+    .ccsConfigurationReport table tr:nth-child(2n) td {
+        background-color: #ffffff;
+    }

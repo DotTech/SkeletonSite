@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "System tests";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1 class="title">System test page</h1>
+
+@Html.Raw(Configuration.ConfigurationReport())
