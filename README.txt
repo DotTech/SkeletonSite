@@ -15,8 +15,8 @@ It provides the following features:
 - Logging solution that enabled output to multiple targets, comes with logger for debug console, log file and web application.
   Custom loggers are very easy to implement.
 - NHibernate 3.1 fully implemented using FluentNHibernate.
-  This allows for all configuration to be performed in code, instead of XML files.
-  Object mapping is also done in code with a Fluent interface.
+  This allows for all NHibernate configuration to be performed in code, instead of XML files.
+  Object mapping is also performed in code using a fluent interface.
 - Database schema creation from code, so you only have to create your object model and NHibernate can create your database.
 - BaseEntity class that provides all needed CRUD operations, with support for paging and sorting.
 - Multi-language support (also applied to model validation messages)
@@ -44,6 +44,9 @@ change the default MVC action to /Home/Index in the Global.asax and run the solu
 An example form page will now be displayed.
 
 Call /Home/Testing to run system tests.
+
+By default, the web logger is enabled so all logging are added to the SessionManager.SessionNotifications/SessionErrors collection and displayed on the website.
+This can be disabled in Configuration.xml (it's the logger at line 57)
 
 Known issue: cookies do not work in Chrome if you run the solution from the ASP.NET dev server (probably due to the port number)
 
